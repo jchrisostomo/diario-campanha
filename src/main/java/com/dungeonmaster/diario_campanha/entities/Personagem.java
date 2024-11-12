@@ -9,7 +9,7 @@ import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "tbl_character")
-public class Character {
+public class Personagem {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -23,10 +23,10 @@ public class Character {
     @Column(columnDefinition = "TEXT")
     private String characterDescription;
 
-    public Character() {       
+    public Personagem() {       
     }
 
-    public Character(Long id, String characterName, String characterSpecie, String characterClass,
+    public Personagem(Long id, String characterName, String characterSpecie, String characterClass,
             Integer characterLevel, String characterimgUrl, String characterDescription) {
         this.id = id;
         this.characterName = characterName;
@@ -109,7 +109,7 @@ public class Character {
             return false;
         if (getClass() != obj.getClass())
             return false;
-        Character other = (Character) obj;
+        Personagem other = (Personagem) obj;
         if (id == null) {
             if (other.id != null)
                 return false;
