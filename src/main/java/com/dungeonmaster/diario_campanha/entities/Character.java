@@ -1,5 +1,6 @@
 package com.dungeonmaster.diario_campanha.entities;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -18,6 +19,8 @@ public class Character {
     private String characterClass;
     private Integer characterLevel;
     private String characterimgUrl;
+
+    @Column(columnDefinition = "TEXT")
     private String characterDescription;
 
     public Character() {       
